@@ -1,0 +1,90 @@
+/* Navbar.css */
+
+/* Navbar styles */
+.navbar {
+    background-color: #333; /* Set the background color of the navbar */
+    color: white; /* Set the text color of the links */
+    padding: 10px 20px; /* Add some padding for spacing */
+    display: flex; /* Make the navbar a flex container */
+    justify-content: space-between; /* Space items evenly horizontally */
+    align-items: center; /* Center items vertically */
+    height: 60px;
+  }
+  
+  /* Three-line icon styles */
+  .menu-icon {
+    display: none; /* Initially hide the icon */
+    flex-direction: column;
+    cursor: pointer;
+  }
+  
+  .bar {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 3px 0;
+    transition: 0.4s;
+  }
+  
+  /* Navigation list styles */
+  .nav-list {
+    list-style: none; /* Remove bullet points from the list */
+    padding: 0;
+    display: flex; /* Display the list items horizontally */
+  }
+  
+  .nav-item {
+    margin-right: 20px; /* Add some spacing between list items */
+  }
+  
+  .nav-item:last-child {
+    margin-right: 0; /* Remove margin from the last list item */
+  }
+  
+  .nav-item a {
+    text-decoration: none; /* Remove underline from links */
+    color: white; /* Set link text color */
+  }
+  
+  .nav-item a:hover {
+    color: white;
+    font-size: larger; /* Add underline on hover */
+  }
+  
+  /* Responsive styles for small screens */
+  @media screen and (max-width: 768px) {
+    .menu-icon {
+      display: flex; /* Display the icon for small screens */
+    }
+  
+    .nav-list {
+      display: flex;
+      flex-direction: column;
+      background-color: #333;
+      position: absolute;
+      top: 60px;
+      right: 0;
+      left: 0;
+    }
+  
+    .nav-item {
+      margin: 10px 0;
+    }
+  
+    .navbar.open .bar:nth-child(1) {
+      transform: rotate(-45deg) translate(-5px, 6px);
+    }
+  
+    .navbar.open .bar:nth-child(2) {
+      opacity: 0;
+    }
+  
+    .navbar.open .bar:nth-child(3) {
+      transform: rotate(45deg) translate(-5px, -6px);
+    }
+  }
+  .Profile-div{
+    width: fit-content;
+    padding: 10px;
+    position: relative;
+  }
